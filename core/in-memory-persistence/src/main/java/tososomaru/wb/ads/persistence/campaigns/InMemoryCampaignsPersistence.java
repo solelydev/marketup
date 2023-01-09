@@ -23,7 +23,12 @@ public class InMemoryCampaignsPersistence implements
     }
 
     @Override
-    public void remove(UUID id) {
+    public List<Campaign> getAll() {
+        return campaigns;
+    }
+
+    @Override
+    public void execute(UUID id) {
         getById(id).ifPresent(campaigns::remove);
     }
 

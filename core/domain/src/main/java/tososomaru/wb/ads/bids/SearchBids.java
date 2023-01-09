@@ -1,15 +1,23 @@
 package tososomaru.wb.ads.bids;
 
-import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Value;
+import tososomaru.wb.ads.common.AdsType;
 
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
 @Value
-@Builder
-public class SearchBids implements Bids {
-    List<CurrentBid> bids;
+public class SearchBids extends BaseBids {
     List<String> priorityCategories;
     Integer minCpm;
-    String request;
+
+    public SearchBids(List<CurrentBid> bids,
+                      String request,
+                      List<String> priorityCategories,
+                      Integer minCpm) {
+        super(bids, request, AdsType.SEARCH);
+        this.priorityCategories = priorityCategories;
+        this.minCpm = minCpm;
+    }
 }

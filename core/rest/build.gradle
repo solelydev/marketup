@@ -12,10 +12,10 @@ dependencies {
 
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-api:2.0.2'
-//    implementation 'org.springdoc:springdoc-openapi-starter-common:2.0.2'
-//
-//    annotationProcessor 'com.github.therapi:therapi-runtime-javadoc-scribe:0.13.0'
-//
-//    // Runtime library
-//    implementation 'com.github.therapi:therapi-runtime-javadoc:0.13.0'
+    implementation 'org.springdoc:springdoc-openapi-starter-common:2.0.2'
+
+    annotationProcessor 'com.github.therapi:therapi-runtime-javadoc-scribe:0.13.0'
+
+    // Runtime library
+    implementation 'com.github.therapi:therapi-runtime-javadoc:0.13.0'
 }

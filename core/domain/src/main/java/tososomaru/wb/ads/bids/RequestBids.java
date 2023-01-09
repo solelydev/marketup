@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.UUID;
 
 @Value
-// TODO выдывать preview только при получении
 public class RequestBids {
     UUID id;
     Date createdAt;
@@ -16,10 +15,10 @@ public class RequestBids {
     String request;
     List<CurrentBid> bids;
 
-    public RequestBids(AdsType type , String request, Bids bidResult) {
+    public RequestBids(String request, Bids bidResult) {
         this.id = UUID.randomUUID();
         this.createdAt = new Date();
-        this.type = type;
+        this.type = bidResult.getAdsType();
         this.request = request;
         this.bids = bidResult.getBids();
     }

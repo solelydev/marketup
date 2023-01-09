@@ -23,6 +23,11 @@ public class InMemoryCompanyPersistence implements
     }
 
     @Override
+    public List<Company> getALl() {
+        return companies;
+    }
+
+    @Override
     public void remove(UUID id) {
         getById(id).ifPresent(companies::remove);
     }

@@ -11,9 +11,11 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import tososomaru.wb.ads.bids.RequestBids;
 import tososomaru.wb.ads.bids.RequestBidsPreview;
 import tososomaru.wb.ads.bids.Bids;
 import tososomaru.wb.ads.usecase.bids.history.GetAllBidRequestHistory;
+import tososomaru.wb.ads.usecase.bids.history.GetRequestBidsFromHistoryById;
 import tososomaru.wb.ads.usecase.bids.history.GetTop5BidRequestHistory;
 import tososomaru.wb.ads.usecase.bids.history.UpdateBidsFromHistory;
 
@@ -28,6 +30,21 @@ public class BidsHistoryController {
     // TODO просто топ, не 5
     private final GetTop5BidRequestHistory getTop5BidRequestHistory;
     private final UpdateBidsFromHistory updateBidsFromHistory;
+    private final GetRequestBidsFromHistoryById getRequestBidsFromHistoryById;
+
+    /**
+     * Получить запрос ставок
+     * @param id ID запроса
+     * @return {@link RequestBids}
+     */
+    @GetMapping(path = "/id")
+    public ResponseEntity<RequestBids> getRequestBids(
+            @PathVariable String id
+    ) {
+        return ResponseEntity.ok(
+                getRequestBidsFromHistoryById.execute(id)
+        );
+    }
 
     @Operation(summary = "Получить всю историю")
     @ApiResponses(

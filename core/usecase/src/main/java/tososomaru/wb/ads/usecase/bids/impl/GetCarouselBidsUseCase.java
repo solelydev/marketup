@@ -2,14 +2,11 @@ package tososomaru.wb.ads.usecase.bids.impl;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
-import tososomaru.wb.ads.usecase.bids.BidsNotFoundException;
-import tososomaru.wb.ads.wbapi.WbApi;
 import tososomaru.wb.ads.bids.CarouselBids;
-import tososomaru.wb.ads.bids.RequestBids;
-import tososomaru.wb.ads.common.AdsType;
 import tososomaru.wb.ads.bids.CurrentBid;
-import tososomaru.wb.ads.usecase.bids.history.AddBidRequestToHistory;
+import tososomaru.wb.ads.usecase.bids.BidsNotFoundException;
 import tososomaru.wb.ads.usecase.bids.GetCarouselBids;
+import tososomaru.wb.ads.wbapi.WbApi;
 
 import java.net.URI;
 
@@ -18,16 +15,15 @@ import java.net.URI;
 public class GetCarouselBidsUseCase implements GetCarouselBids {
 
     private final WbApi wbApi;
-    private final AddBidRequestToHistory addBidRequestToHistory;
 
     @Override
     public CarouselBids execute(String itemNumber) {
-        Integer itemNumberInt;
+        int itemNumberInt;
         try {
             var path = URI.create(itemNumber).getPath();
-            itemNumberInt = Integer.valueOf(path.split("/")[1]);
+            itemNumberInt = Integer.parseInt(path.split("/")[1]);
         } catch (Exception ignored) {
-            itemNumberInt = Integer.valueOf(itemNumber);
+            itemNumberInt = Integer.parseInt(itemNumber);
         }
         var carouselAds = wbApi.getCarouselAds(itemNumberInt);
 
@@ -47,11 +43,6 @@ public class GetCarouselBidsUseCase implements GetCarouselBids {
                         )
                 )
                 .toList();
-        var result = new CarouselBids(bids, itemNumber);
-        // TODO использовать эвенты
-        addBidRequestToHistory.execute(
-                new RequestBids(AdsType.CAROUSEL, itemNumber, result)
-        );
-        return result;
+        return new CarouselBids(bids, itemNumber);
     }
 }
