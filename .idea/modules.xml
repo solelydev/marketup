@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/domain/wb-advertising.core.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/domain/wb-advertising.core.domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/jpa-persistence/wb-advertising.core.jpa-persistence.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/jpa-persistence/wb-advertising.core.jpa-persistence.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/jpa-persistence/wb-advertising.core.jpa-persistence.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/jpa-persistence/wb-advertising.core.jpa-persistence.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/listener/wb-advertising.core.listener.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/listener/wb-advertising.core.listener.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/listener/wb-advertising.core.listener.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/listener/wb-advertising.core.listener.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/rest/wb-advertising.core.rest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/rest/wb-advertising.core.rest.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/rest/wb-advertising.core.rest.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/rest/wb-advertising.core.rest.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/usecase/wb-advertising.core.usecase.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/usecase/wb-advertising.core.usecase.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/usecase/wb-advertising.core.usecase.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/usecase/wb-advertising.core.usecase.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/wb-api/wb-advertising.core.wb-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/wb-api/wb-advertising.core.wb-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/wb-api/wb-advertising.core.wb-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/wb-api/wb-advertising.core.wb-api.test.iml" />
+    </modules>
+  </component>
+</project>

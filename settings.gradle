@@ -1,0 +1,11 @@
+rootProject.name = 'wb-advertising'
+
+include ':core:domain'
+include ':core:jpa-persistence'
+include ':core:in-memory-persistence'
+include ':core:usecase'
+include ':core:rest'
+include ':core:application'
+include ':core:listener'
+
+include ':core:wb-api'
