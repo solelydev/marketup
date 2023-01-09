@@ -7,5 +7,6 @@ include ':core:usecase'
 include ':core:rest'
 include ':core:application'
 include ':core:listener'
+include ':core:common'
 
 include ':core:wb-api'

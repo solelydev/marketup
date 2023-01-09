@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/common/wb-advertising.core.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/common/wb-advertising.core.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/common/wb-advertising.core.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/common/wb-advertising.core.common.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/domain/wb-advertising.core.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/domain/wb-advertising.core.domain.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.test.iml" />
