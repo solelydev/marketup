@@ -12,7 +12,10 @@ public class CategoryAdsToBidsMapper {
     public List<CurrentBid> execute(CategoryAdsResponse categoryAds) {
         var currentBids = new ArrayList<CurrentBid>();
 
-        var adverts = categoryAds.getAdverts();
+        var adverts = categoryAds.getAdverts()
+                .stream()
+                .limit(categoryAds.getPages().size())
+                .toList();
 
         for (int i = 0; i < adverts.size(); i++) {
             var advert = adverts.get(i);
