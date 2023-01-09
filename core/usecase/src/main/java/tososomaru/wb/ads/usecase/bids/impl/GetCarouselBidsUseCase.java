@@ -11,6 +11,8 @@ import tososomaru.wb.ads.bids.CurrentBid;
 import tososomaru.wb.ads.usecase.bids.history.AddBidRequestToHistory;
 import tososomaru.wb.ads.usecase.bids.GetCarouselBids;
 
+import java.net.URI;
+
 @AllArgsConstructor
 @Component
 public class GetCarouselBidsUseCase implements GetCarouselBids {
@@ -20,7 +22,13 @@ public class GetCarouselBidsUseCase implements GetCarouselBids {
 
     @Override
     public CarouselBids execute(String itemNumber) {
-        var itemNumberInt = Integer.valueOf(itemNumber);
+        Integer itemNumberInt;
+        try {
+            var path = URI.create(itemNumber).getPath();
+            itemNumberInt = Integer.valueOf(path.split("/")[1]);
+        } catch (Exception ignored) {
+            itemNumberInt = Integer.valueOf(itemNumber);
+        }
         var carouselAds = wbApi.getCarouselAds(itemNumberInt);
 
         // TODO use either

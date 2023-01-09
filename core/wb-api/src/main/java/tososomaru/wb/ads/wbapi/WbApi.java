@@ -15,83 +15,47 @@ public class WbApi {
     private static final Gson gson = new Gson();
 
     public CardResponse getCardByNumber(Integer itemNumber) {
-        var endpoint = "https://wbx-content-v2.wbstatic.net/ru/27765179.json";
-        return null;
+        var endpoint = String.format("https://wbx-content-v2.wbstatic.net/ru/%d.json", itemNumber);
+        return request(endpoint, CardResponse.class);
     }
 
     public MainMenuResponse getMainMenu() {
         var endpoint = "https://www.wildberries.ru/webapi/menu/main-menu-ru-ru.json";
-        var uri = URI.create(endpoint);
-        var request = HttpRequest.newBuilder().GET().uri(uri).build();
-
-        var client = HttpClient.newHttpClient();
-
-        try {
-            var response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            return gson.fromJson(response.body(), MainMenuResponse.class);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        return request(endpoint, MainMenuResponse.class);
     }
 
-    public SearchAdsResponse getCatalogAds(String keyword) {
-        String endpoint = "https://catalog-ads.wildberries.ru/api/v5/search?keyword="
+    public SearchAdsResponse getSearchAds(String keyword) {
+        var endpoint = "https://catalog-ads.wildberries.ru/api/v5/search?keyword="
                 + URLEncoder.encode(keyword, StandardCharsets.UTF_8);
-
-        URI uri = URI.create(endpoint);
-        HttpRequest request = HttpRequest
-                .newBuilder()
-                .GET()
-                .uri(uri)
-                .build();
-
-        HttpClient httpClient = HttpClient.newBuilder().build();
-
-        try {
-            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-            return gson.fromJson(response.body(), SearchAdsResponse.class);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        return request(endpoint, SearchAdsResponse.class);
     }
 
     public CategoryAdsResponse getCategoryAds(Integer menuId) {
-        String endpoint = "https://catalog-ads.wildberries.ru/api/v5/catalog?menuid=" + menuId;
-
-        URI uri = URI.create(endpoint);
-        HttpRequest request = HttpRequest
-                .newBuilder()
-                .GET()
-                .uri(uri)
-                .build();
-
-        HttpClient httpClient = HttpClient.newBuilder().build();
-
-        try {
-            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-            return gson.fromJson(response.body(), CategoryAdsResponse.class);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        var endpoint = "https://catalog-ads.wildberries.ru/api/v5/catalog?menuid=" + menuId;
+        return request(endpoint, CategoryAdsResponse.class);
     }
 
     public CarouselAdsResponse getCarouselAds(Integer itemNumber) {
-        String endpoint = "https://carousel-ads.wildberries.ru/api/v4/carousel?nm=" + itemNumber;
+        var endpoint = "https://carousel-ads.wildberries.ru/api/v4/carousel?nm=" + itemNumber;
+        return request(endpoint, CarouselAdsResponse.class);
+    }
 
-        URI uri = URI.create(endpoint);
-        HttpRequest request = HttpRequest
-                .newBuilder()
+    //TODO
+    private <T> T request(String endpoint, Class<T> clazz) {
+        var uri = URI.create(endpoint);
+        var request = HttpRequest.newBuilder()
                 .GET()
                 .uri(uri)
                 .build();
 
-        HttpClient httpClient = HttpClient.newBuilder().build();
+        var client = HttpClient.newBuilder()
+                .build();
 
         try {
-            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-            return gson.fromJson(response.body(), CarouselAdsResponse.class);
+            var response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            return gson.fromJson(response.body(), clazz);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage());
         }
     }
 
