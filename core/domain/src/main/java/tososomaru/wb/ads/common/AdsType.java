@@ -1,4 +1,4 @@
-package tososomaru.wb.ads.bids;
+package tososomaru.wb.ads.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

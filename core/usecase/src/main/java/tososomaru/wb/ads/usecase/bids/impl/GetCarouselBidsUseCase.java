@@ -6,7 +6,7 @@ import tososomaru.wb.ads.usecase.bids.BidsNotFoundException;
 import tososomaru.wb.ads.wbapi.WbApi;
 import tososomaru.wb.ads.bids.CarouselBids;
 import tososomaru.wb.ads.bids.RequestBids;
-import tososomaru.wb.ads.bids.AdsType;
+import tososomaru.wb.ads.common.AdsType;
 import tososomaru.wb.ads.bids.CurrentBid;
 import tososomaru.wb.ads.usecase.bids.history.AddBidRequestToHistory;
 import tososomaru.wb.ads.usecase.bids.GetCarouselBids;

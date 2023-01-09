@@ -1,7 +1,7 @@
 package tososomaru.wb.ads.usecase.campaigns;
 
 import lombok.Value;
-import tososomaru.wb.ads.bids.AdsType;
+import tososomaru.wb.ads.common.AdsType;
 import tososomaru.wb.ads.campaigns.Campaign;
 import tososomaru.wb.ads.campaigns.CampaignType;
 

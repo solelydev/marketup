@@ -2,7 +2,7 @@ package tososomaru.wb.ads.usecase.bids.impl;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
-import tososomaru.wb.ads.bids.AdsType;
+import tososomaru.wb.ads.common.AdsType;
 import tososomaru.wb.ads.bids.CategoryBids;
 import tososomaru.wb.ads.bids.RequestBids;
 import tososomaru.wb.ads.usecase.bids.BidsNotFoundException;

@@ -1,6 +1,7 @@
 package tososomaru.wb.ads.bids;
 
 import lombok.Value;
+import tososomaru.wb.ads.common.AdsType;
 
 import java.util.Date;
 import java.util.List;

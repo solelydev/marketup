@@ -2,7 +2,7 @@ package tososomaru.wb.ads.usecase.bids.impl;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
-import tososomaru.wb.ads.bids.AdsType;
+import tososomaru.wb.ads.common.AdsType;
 import tososomaru.wb.ads.bids.Bids;
 import tososomaru.wb.ads.usecase.bids.GetBidsByAdsType;
 import tososomaru.wb.ads.usecase.bids.GetCarouselBids;

@@ -3,7 +3,7 @@ package tososomaru.wb.ads.campaigns;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Value;
-import tososomaru.wb.ads.bids.AdsType;
+import tososomaru.wb.ads.common.AdsType;
 
 import java.util.Date;
 import java.util.List;

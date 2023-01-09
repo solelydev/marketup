@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.*;
 import tososomaru.wb.ads.bids.*;
+import tososomaru.wb.ads.common.AdsType;
 import tososomaru.wb.ads.usecase.bids.*;
 
 // TODO переместить контроллер в infrastructure
