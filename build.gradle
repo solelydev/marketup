@@ -11,6 +11,7 @@ allprojects {
 
 ext {
     lombokVersion = '1.18.24'
+    vavrVersion = '0.10.4'
 }
 
 subprojects {
@@ -22,6 +23,7 @@ subprojects {
     dependencies {
         annotationProcessor "org.projectlombok:lombok:$lombokVersion"
         compileOnly "org.projectlombok:lombok:$lombokVersion"
+        implementation "io.vavr:vavr:$vavrVersion"
     }
 
     test {
