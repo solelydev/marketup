@@ -16,6 +16,7 @@ ext {
 
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'jacoco'
 
     sourceCompatibility = JavaVersion.VERSION_19
     targetCompatibility = JavaVersion.VERSION_19
@@ -28,5 +29,32 @@ subprojects {
 
     test {
         useJUnitPlatform()
+    }
+
+    check {
+        finalizedBy jacocoTestReport
+    }
+
+    jacocoTestReport {
+        dependsOn check
+        finalizedBy jacocoTestCoverageVerification
+    }
+
+    jacocoTestCoverageVerification {
+        dependsOn(jacocoTestReport)
+
+        violationRules {
+
+            rule {
+                excludes = ['application']
+            }
+
+            rule {
+                enabled false
+                limit {
+                    minimum = 0
+                }
+            }
+        }
     }
 }
