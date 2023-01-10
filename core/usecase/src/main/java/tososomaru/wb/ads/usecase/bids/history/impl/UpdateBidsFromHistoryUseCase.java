@@ -1,28 +1,30 @@
 package tososomaru.wb.ads.usecase.bids.history.impl;
 
+import io.vavr.control.Either;
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Component;
 import tososomaru.wb.ads.bids.Bids;
 import tososomaru.wb.ads.usecase.bids.GetBidsByAdsType;
-import tososomaru.wb.ads.usecase.bids.history.BidRequestsHistoryExtractor;
+import tososomaru.wb.ads.usecase.bids.history.GetRequestBidsFromHistoryById;
 import tososomaru.wb.ads.usecase.bids.history.UpdateBidsFromHistory;
 
-import java.util.UUID;
-
 @AllArgsConstructor
-@Component
+
 public class UpdateBidsFromHistoryUseCase implements UpdateBidsFromHistory {
-    private final BidRequestsHistoryExtractor bidRequestsHistoryExtractor;
     private final GetBidsByAdsType getBidsByAdsType;
+    private final GetRequestBidsFromHistoryById getRequestBidsFromHistoryById;
 
     @Override
-    public Bids execute(String id) {
-        // TODO валидация
-        UUID uuid = UUID.fromString(id);
-        // TODO exception -> either
-        return bidRequestsHistoryExtractor.getById(uuid)
-                .map(request -> getBidsByAdsType.execute(request.getRequest(), request.getType().toString()))
-                .orElseThrow(() -> new RuntimeException("Not found"))
-                ;
+    public Either<UpdateBidsFromHistory.UpdateBidsFromHistoryError, Bids> execute(String id) {
+        return getRequestBidsFromHistoryById.execute(id)
+                .bimap(
+                        error -> switch (error) {
+                            case GetRequestBidsFromHistoryById.GetRequestBidsFromHistoryByIdError.NotFound ignored
+                                    -> new UpdateBidsFromHistoryError.BidsNotFound();
+                        },
+                        req -> getBidsByAdsType.execute(
+                                req.getRequest(),
+                                req.getType().toString()
+                        ).get()
+                );
     }
 }

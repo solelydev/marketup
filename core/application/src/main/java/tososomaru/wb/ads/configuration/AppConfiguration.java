@@ -7,7 +7,10 @@ import tososomaru.wb.ads.wbapi.WbMenuIdStore;
 import tososomaru.wb.ads.wbapi.WbApi;
 
 @Configuration
-@Import({PersistenceConfiguration.class})
+@Import({
+        PersistenceConfiguration.class,
+        UseCaseConfiguration.class
+})
 public class AppConfiguration {
 
     @Bean

@@ -14,6 +14,6 @@ public class ApplicationReadyEventListener implements ApplicationListener<Applic
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
-        synchronizeCampaigns.execute();
+//        synchronizeCampaigns.execute();
     }
 }

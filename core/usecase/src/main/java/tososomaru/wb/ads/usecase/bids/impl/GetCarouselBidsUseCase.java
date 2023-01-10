@@ -3,7 +3,6 @@ package tososomaru.wb.ads.usecase.bids.impl;
 import io.vavr.control.Either;
 import io.vavr.control.Option;
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Component;
 import tososomaru.wb.ads.bids.CarouselBids;
 import tososomaru.wb.ads.bids.CurrentBid;
 import tososomaru.wb.ads.common.types.SKU;
@@ -15,7 +14,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 @AllArgsConstructor
-@Component
+
 public class GetCarouselBidsUseCase implements GetCarouselBids {
 
     private final WbApi wbApi;

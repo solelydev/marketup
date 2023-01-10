@@ -41,9 +41,14 @@ public class BidsHistoryController {
     public ResponseEntity<RequestBids> getRequestBids(
             @PathVariable String id
     ) {
-        return ResponseEntity.ok(
-                getRequestBidsFromHistoryById.execute(id)
-        );
+        return getRequestBidsFromHistoryById.execute(id)
+                .fold(
+                        error -> switch (error) {
+                            case GetRequestBidsFromHistoryById.GetRequestBidsFromHistoryByIdError.NotFound e
+                                    -> ResponseEntity.notFound().build();
+                        },
+                        ResponseEntity::ok
+                );
     }
 
     @Operation(summary = "Получить всю историю")
@@ -107,8 +112,13 @@ public class BidsHistoryController {
             @Parameter(name = "requestId", description = "ID запроса из истории", example = "3fa85f64-5717-4562-b3fc-2c963f66afa6")
             @PathVariable String requestId
     ) {
-        return ResponseEntity.accepted().body(
-                updateBidsFromHistory.execute(requestId)
-        );
+        return updateBidsFromHistory.execute(requestId)
+                .fold(
+                        error -> switch (error) {
+                            case UpdateBidsFromHistory.UpdateBidsFromHistoryError.BidsNotFound ignored
+                                -> ResponseEntity.notFound().build();
+                        },
+                        bids -> ResponseEntity.accepted().body(bids)
+                );
     }
 }

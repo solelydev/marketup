@@ -1,16 +1,15 @@
 package tososomaru.wb.ads.usecase.bids.history.impl;
 
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Component;
-import tososomaru.wb.ads.bids.RequestBidsPreview;
 import tososomaru.wb.ads.bids.RequestBids;
+import tososomaru.wb.ads.bids.RequestBidsPreview;
 import tososomaru.wb.ads.usecase.bids.history.BidRequestsHistoryExtractor;
 import tososomaru.wb.ads.usecase.bids.history.GetAllBidRequestHistory;
 
 import java.util.List;
 
 @AllArgsConstructor
-@Component
+
 public class GetAllBidRequestHistoryUseCase implements GetAllBidRequestHistory {
     private final BidRequestsHistoryExtractor bidRequestsHistoryExtractor;
     @Override

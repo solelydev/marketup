@@ -1,9 +1,8 @@
 package tososomaru.wb.ads.usecase.bids.impl;
 
+import io.vavr.control.Either;
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Component;
 import tososomaru.wb.ads.bids.CategoryBids;
-import tososomaru.wb.ads.usecase.bids.BidsNotFoundException;
 import tososomaru.wb.ads.usecase.bids.CategoryAdsToBidsMapper;
 import tososomaru.wb.ads.usecase.bids.GetCategoryBids;
 import tososomaru.wb.ads.wbapi.WbApi;
@@ -12,7 +11,7 @@ import tososomaru.wb.ads.wbapi.WbMenuIdStore;
 import java.net.URI;
 
 @AllArgsConstructor
-@Component
+
 public class GetCategoryBidsUseCase implements GetCategoryBids {
 
     private final CategoryAdsToBidsMapper categoryAdsToBidsMapper;
@@ -20,7 +19,7 @@ public class GetCategoryBidsUseCase implements GetCategoryBids {
     private final WbMenuIdStore wbMenuIdStore;
 
     @Override
-    public CategoryBids execute(String menuIdOrMenuUrl) {
+    public Either<GetCategoryBidsError, CategoryBids> execute(String menuIdOrMenuUrl) {
         Integer menuIdInt;
         try {
             String path = URI.create(menuIdOrMenuUrl).getPath();
@@ -28,16 +27,20 @@ public class GetCategoryBidsUseCase implements GetCategoryBids {
                     .orElseThrow(() -> new RuntimeException("menu not  found"));
         } catch (IllegalArgumentException ignored) {
             menuIdInt = Integer.valueOf(menuIdOrMenuUrl);
+        } catch (Exception e) {
+            return Either.left(new GetCategoryBidsError.CreateMenuId(e.getMessage()));
         }
 
         var catalogAds = wbApi.getCategoryAds(menuIdInt);
 
         if (catalogAds.getAdverts() == null || catalogAds.getAdverts().isEmpty()) {
-            throw new BidsNotFoundException("Bids not found");
+            return Either.left(new GetCategoryBidsError.BidsNotFound());
         }
 
         var bids = categoryAdsToBidsMapper.execute(catalogAds);
-        return new CategoryBids(bids, menuIdOrMenuUrl, catalogAds.getMinCPM());
+        return Either.right(
+                new CategoryBids(bids, menuIdOrMenuUrl, catalogAds.getMinCPM())
+        );
     }
 
 }

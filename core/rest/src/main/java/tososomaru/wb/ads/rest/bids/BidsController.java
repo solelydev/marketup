@@ -45,7 +45,7 @@ public class BidsController {
             }
     )
     @PostMapping
-    public ResponseEntity<Bids> getBids(
+    public ResponseEntity<?> getBids(
             @Parameter(name = "r", description = "Ключевое слово, артикул или id категории",
                     example = "Телефон")
             @RequestParam String r,
@@ -53,9 +53,11 @@ public class BidsController {
                     schema = @Schema(implementation = AdsType.class))
             @RequestParam String adsType
     ) {
-        return ResponseEntity.ok(
-                getBidsByAdsType.execute(r, adsType)
-        );
+        return getBidsByAdsType.execute(r, adsType)
+                .fold(
+                        error -> ResponseEntity.unprocessableEntity().body(error.toString()),
+                        ResponseEntity::ok
+                );
     }
 
     // TODO также принимать ссылку
@@ -74,13 +76,20 @@ public class BidsController {
             }
     )
     @PostMapping("/search")
-    public ResponseEntity<SearchBids> getSearchBids(
+    public ResponseEntity getSearchBids(
             @Parameter(name = "keyword", description = "Ключевое слово", example = "Телефон")
             @RequestParam String keyword
     ) {
-        return ResponseEntity.ok(
-                getSearchBids.execute(keyword)
-        );
+        return getSearchBids.execute(keyword)
+                .fold(
+                        error -> switch (error) {
+                            case GetSearchBids.GetSearchBidsError.BidsNotFound ignored
+                                    -> ResponseEntity.notFound().build();
+                            case GetSearchBids.GetSearchBidsError.CreateKeyword err
+                                    -> ResponseEntity.unprocessableEntity().body(err.getMessage());
+                        },
+                        ResponseEntity::ok
+                );
     }
 
     // TODO также принимать ссылку
@@ -129,13 +138,20 @@ public class BidsController {
             }
     )
     @PostMapping("/category")
-    public ResponseEntity<CategoryBids> getCategoryBids(
+    public ResponseEntity<?> getCategoryBids(
             @Parameter(name = "menuId",description = "Id категории", example = "8144")
             @RequestParam String menuId
     ) {
-        return ResponseEntity.ok(
-                getCategoryBids.execute(menuId)
-        );
+        return getCategoryBids.execute(menuId)
+                .fold(
+                        error -> switch (error) {
+                            case GetCategoryBids.GetCategoryBidsError.BidsNotFound ignored
+                                -> ResponseEntity.notFound().build();
+                            case GetCategoryBids.GetCategoryBidsError.CreateMenuId err
+                                    -> ResponseEntity.unprocessableEntity().body(err.getMessage());
+                        },
+                        ResponseEntity::ok
+                );
     }
 
     // TODO переместить обработку ошибок

@@ -1,5 +1,6 @@
 package tososomaru.wb.ads.persistence.bids;
 
+import io.vavr.control.Option;
 import tososomaru.wb.ads.bids.RequestBids;
 import tososomaru.wb.ads.usecase.bids.history.BidRequestsHistoryExtractor;
 import tososomaru.wb.ads.usecase.bids.history.BidRequestsHistorySaver;
@@ -24,8 +25,10 @@ public class InMemoryBidRequestsHistoryPersistence implements
     }
 
     @Override
-    public Optional<RequestBids> getById(UUID id) {
-        return bidRequests.stream().filter(bid -> bid.getId().equals(id)).findFirst();
+    public Option<RequestBids> getById(UUID id) {
+        return Option.ofOptional(
+                bidRequests.stream().filter(bid -> bid.getId().equals(id)).findFirst()
+        );
     }
 
     @Override

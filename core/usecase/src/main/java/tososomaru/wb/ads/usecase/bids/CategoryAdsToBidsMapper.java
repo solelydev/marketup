@@ -1,13 +1,12 @@
 package tososomaru.wb.ads.usecase.bids;
 
-import org.springframework.stereotype.Component;
-import tososomaru.wb.ads.wbapi.model.CategoryAdsResponse;
 import tososomaru.wb.ads.bids.CurrentBid;
+import tososomaru.wb.ads.wbapi.model.CategoryAdsResponse;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+
 public class CategoryAdsToBidsMapper {
     public List<CurrentBid> execute(CategoryAdsResponse categoryAds) {
         var currentBids = new ArrayList<CurrentBid>();
