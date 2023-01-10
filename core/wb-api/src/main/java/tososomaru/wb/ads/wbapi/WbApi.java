@@ -1,6 +1,7 @@
 package tososomaru.wb.ads.wbapi;
 
 import com.google.gson.Gson;
+import io.vavr.control.Option;
 import tososomaru.wb.ads.wbapi.model.*;
 
 import java.net.URI;
@@ -35,9 +36,9 @@ public class WbApi {
         return request(endpoint, CategoryAdsResponse.class);
     }
 
-    public CarouselAdsResponse getCarouselAds(Integer itemNumber) {
+    public Option<CarouselAdsResponse> getCarouselAds(Integer itemNumber) {
         var endpoint = "https://carousel-ads.wildberries.ru/api/v4/carousel?nm=" + itemNumber;
-        return request(endpoint, CarouselAdsResponse.class);
+        return Option.of(request(endpoint, CarouselAdsResponse.class));
     }
 
     //TODO

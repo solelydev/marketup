@@ -99,13 +99,18 @@ public class BidsController {
             }
     )
     @PostMapping("/carousel")
-    public ResponseEntity<CarouselBids> getCarouselBids(
+    public ResponseEntity<?> getCarouselBids(
             @Parameter(name = "itemNumber", description = "Артикул карточки", example = "135485046")
             @RequestParam String itemNumber
     ) {
-        return ResponseEntity.ok(
-                getCarouselBids.execute(itemNumber)
-        );
+        return getCarouselBids.execute(itemNumber)
+                .fold(
+                        e -> switch (e) {
+                            case GetCarouselBids.GetCarouselBidsError.CreateSKU a -> ResponseEntity.unprocessableEntity().body(a.getMessage());
+                            case GetCarouselBids.GetCarouselBidsError.BidsNotFound ignored -> ResponseEntity.notFound().build();
+                        },
+                        ResponseEntity::ok
+                );
     }
 
     // TODO также принимать ссылку

@@ -5,6 +5,7 @@ plugins {
 
 dependencies {
     implementation project(':core:domain')
+    implementation project(':core:common')
     implementation project(':core:wb-api')
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
