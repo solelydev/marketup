@@ -9,18 +9,18 @@ import tososomaru.wb.ads.persistence.companies.InMemoryCompanyPersistence;
 @Configuration
 public class PersistenceConfiguration {
 
-    @Bean
-    public InMemoryBidRequestsHistoryPersistence InMemoryBidRequestsHistoryPersistence() {
-        return new InMemoryBidRequestsHistoryPersistence();
-    }
+  @Bean
+  public InMemoryBidRequestsHistoryPersistence InMemoryBidRequestsHistoryPersistence() {
+    return new InMemoryBidRequestsHistoryPersistence();
+  }
 
-    @Bean
-    public InMemoryCompanyPersistence inMemoryCompanyPersistence() {
-        return new InMemoryCompanyPersistence();
-    }
+  @Bean
+  public InMemoryCompanyPersistence inMemoryCompanyPersistence() {
+    return new InMemoryCompanyPersistence();
+  }
 
-    @Bean
-    public InMemoryCampaignsPersistence inMemoryCampaignsPersistence() {
-        return new InMemoryCampaignsPersistence();
-    }
+  @Bean
+  public InMemoryCampaignsPersistence inMemoryCampaignsPersistence() {
+    return new InMemoryCampaignsPersistence();
+  }
 }

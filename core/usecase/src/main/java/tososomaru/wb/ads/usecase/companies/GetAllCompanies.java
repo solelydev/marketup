@@ -1,9 +1,8 @@
 package tososomaru.wb.ads.usecase.companies;
 
+import java.util.List;
 import tososomaru.wb.ads.companies.Company;
 
-import java.util.List;
-
 public interface GetAllCompanies {
-    List<Company> execute();
+  List<Company> execute();
 }

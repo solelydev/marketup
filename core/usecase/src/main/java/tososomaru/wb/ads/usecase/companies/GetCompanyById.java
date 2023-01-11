@@ -1,9 +1,8 @@
 package tososomaru.wb.ads.usecase.companies;
 
+import java.util.UUID;
 import tososomaru.wb.ads.companies.Company;
 
-import java.util.UUID;
-
 public interface GetCompanyById {
-    Company execute(UUID id);
+  Company execute(UUID id);
 }

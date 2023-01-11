@@ -1,13 +1,12 @@
 package tososomaru.wb.ads.bids;
 
+import java.util.List;
 import tososomaru.wb.ads.common.AdsType;
 
-import java.util.List;
-
 public interface Bids {
-    List<CurrentBid> getBids();
+  List<CurrentBid> getBids();
 
-    String getRequest();
+  String getRequest();
 
-    AdsType getAdsType();
+  AdsType getAdsType();
 }

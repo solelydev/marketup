@@ -6,13 +6,12 @@ import tososomaru.wb.ads.usecase.bids.history.AddBidRequestToHistory;
 import tososomaru.wb.ads.usecase.bids.history.BidRequestsHistorySaver;
 
 @AllArgsConstructor
-
 public class AddBidRequestToHistoryUseCase implements AddBidRequestToHistory {
 
-    private final BidRequestsHistorySaver bidRequestsHistorySaver;
+  private final BidRequestsHistorySaver bidRequestsHistorySaver;
 
-    @Override
-    public void execute(RequestBids request) {
-        bidRequestsHistorySaver.save(request);
-    }
+  @Override
+  public void execute(RequestBids request) {
+    bidRequestsHistorySaver.save(request);
+  }
 }

@@ -6,9 +6,9 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public enum AdsType {
-    SEARCH("search"),
-    CATEGORY("category"),
-    CAROUSEL("carousel");
+  SEARCH("search"),
+  CATEGORY("category"),
+  CAROUSEL("carousel");
 
-    private final String value;
+  private final String value;
 }

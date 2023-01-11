@@ -4,10 +4,10 @@ import io.vavr.control.Either;
 import tososomaru.wb.ads.bids.RequestBids;
 
 public interface GetRequestBidsFromHistoryById {
-    Either<GetRequestBidsFromHistoryByIdError, RequestBids> execute(String id);
+  Either<GetRequestBidsFromHistoryByIdError, RequestBids> execute(String id);
 
-    abstract sealed class GetRequestBidsFromHistoryByIdError {
+  abstract sealed class GetRequestBidsFromHistoryByIdError {
 
-        public static final class NotFound extends GetRequestBidsFromHistoryByIdError {}
-    }
+    public static final class NotFound extends GetRequestBidsFromHistoryByIdError {}
+  }
 }

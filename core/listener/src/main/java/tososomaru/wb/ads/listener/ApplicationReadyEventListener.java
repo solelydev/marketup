@@ -10,10 +10,10 @@ import tososomaru.wb.ads.usecase.campaigns.SynchronizeCampaigns;
 @Component
 public class ApplicationReadyEventListener implements ApplicationListener<ApplicationReadyEvent> {
 
-    private final SynchronizeCampaigns synchronizeCampaigns;
+  private final SynchronizeCampaigns synchronizeCampaigns;
 
-    @Override
-    public void onApplicationEvent(ApplicationReadyEvent event) {
-//        synchronizeCampaigns.execute();
-    }
+  @Override
+  public void onApplicationEvent(ApplicationReadyEvent event) {
+    //        synchronizeCampaigns.execute();
+  }
 }

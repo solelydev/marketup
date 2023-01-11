@@ -1,5 +1,3 @@
 package tososomaru.wb.ads.companies;
 
-public interface CompanyAuth {
-
-}
+public interface CompanyAuth {}

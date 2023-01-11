@@ -1,3 +1,6 @@
+plugins {
+    id "com.diffplug.spotless" version "6.12.1" apply false
+}
 
 allprojects {
 
@@ -15,8 +18,10 @@ ext {
 }
 
 subprojects {
+
     apply plugin: 'java'
     apply plugin: 'jacoco'
+    apply plugin: 'com.diffplug.spotless'
 
     sourceCompatibility = JavaVersion.VERSION_19
     targetCompatibility = JavaVersion.VERSION_19
@@ -58,16 +63,29 @@ subprojects {
         }
     }
 
-    tasks.withType(JavaCompile) {
-        options.compilerArgs += '--enable-preview'
+    spotless {
+        java {
+            googleJavaFormat()
+            formatAnnotations()
+        }
     }
 
-    tasks.withType(Test) {
-        jvmArgs += '--enable-preview'
+    tasks.withType(JavaCompile).tap {
+        configureEach {
+            options.compilerArgs += '--enable-preview'
+        }
     }
 
-    tasks.withType(JavaExec) {
-        jvmArgs += '--enable-preview'
+    tasks.withType(Test).tap {
+        configureEach {
+            jvmArgs += '--enable-preview'
+        }
+    }
+
+    tasks.withType(JavaExec).tap {
+        configureEach {
+            jvmArgs += '--enable-preview'
+        }
     }
 
 }
