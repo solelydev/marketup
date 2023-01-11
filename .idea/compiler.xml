@@ -7,15 +7,15 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.24/13a394eed5c4f9efb2a6d956e2086f1d81e857d9/lombok-1.18.24.jar" />
         </processorPath>
-        <module name="wb-advertising.core.common.main" />
-        <module name="wb-advertising.core.in-memory-persistence.main" />
-        <module name="wb-advertising.core.jpa-persistence.main" />
-        <module name="wb-advertising.core.listener.main" />
-        <module name="wb-advertising.core.usecase.main" />
-        <module name="wb-advertising.core.main" />
-        <module name="wb-advertising.core.domain.main" />
-        <module name="wb-advertising.core.wb-api.main" />
-        <module name="wb-advertising.core.application.main" />
+        <module name="marketup.autobidder.main" />
+        <module name="marketup.wb-api.main" />
+        <module name="marketup.autobidder.jpa-persistence.main" />
+        <module name="com.solelydev.marketup.marketup.autobidder.listener.main" />
+        <module name="com.solelydev.marketup.marketup.autobidder.application.main" />
+        <module name="com.solelydev.marketup.marketup.autobidder.domain.main" />
+        <module name="com.solelydev.marketup.marketup.autobidder.usecase.main" />
+        <module name="com.solelydev.marketup.marketup.autobidder.in-memory-persistence.main" />
+        <module name="com.solelydev.marketup.marketup.autobidder.common.main" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
@@ -24,7 +24,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.therapi/therapi-runtime-javadoc-scribe/0.15.0/bd7a08fb0143141e1a8b2a6075194fe8280fe21d/therapi-runtime-javadoc-scribe-0.15.0.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.therapi/therapi-runtime-javadoc/0.15.0/2ae6d4c59e1c6280cccf64955a83739dc154270b/therapi-runtime-javadoc-0.15.0.jar" />
         </processorPath>
-        <module name="wb-advertising.core.rest.main" />
+        <module name="com.solelydev.marketup.marketup.autobidder.rest.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="19" />
