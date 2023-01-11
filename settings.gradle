@@ -9,4 +9,4 @@ include ':autobidder:application'
 include ':autobidder:listener'
 include ':autobidder:common'
 
-include ':autobidder:wb-api'
+include ':wb-api'

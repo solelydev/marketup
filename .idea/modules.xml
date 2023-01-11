@@ -9,7 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/listener/com.solelydev.marketup.marketup.autobidder.listener.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/listener/com.solelydev.marketup.marketup.autobidder.listener.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/rest/com.solelydev.marketup.marketup.autobidder.rest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/rest/com.solelydev.marketup.marketup.autobidder.rest.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/usecase/com.solelydev.marketup.marketup.autobidder.usecase.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/usecase/com.solelydev.marketup.marketup.autobidder.usecase.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/wb-api/com.solelydev.marketup.marketup.autobidder.wb-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/wb-api/com.solelydev.marketup.marketup.autobidder.wb-api.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/application/marketup.autobidder.application.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/application/marketup.autobidder.application.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/common/marketup.autobidder.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/common/marketup.autobidder.common.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/domain/marketup.autobidder.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/domain/marketup.autobidder.domain.main.iml" />
@@ -18,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/rest/marketup.autobidder.rest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/rest/marketup.autobidder.rest.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/usecase/marketup.autobidder.usecase.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/usecase/marketup.autobidder.usecase.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/wb-api/marketup.autobidder.wb-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/wb-api/marketup.autobidder.wb-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wb-api/marketup.wb-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/wb-api/marketup.wb-api.main.iml" />
     </modules>
   </component>
 </project>

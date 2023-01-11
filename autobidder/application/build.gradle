@@ -8,7 +8,7 @@ dependencies {
     implementation project(':autobidder:in-memory-persistence')
     implementation project(':autobidder:rest')
     implementation project(':autobidder:usecase')
-    implementation project(':autobidder:wb-api')
+    implementation project(':wb-api')
     implementation project(':autobidder:listener')
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
