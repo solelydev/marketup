@@ -4,5 +4,5 @@ import tososomaru.wb.ads.companies.Company;
 import tososomaru.wb.ads.companies.CompanyAuth;
 
 public interface ChangeCompanyAuth {
-    Company execute(String id, CompanyAuth auth);
+  Company execute(String id, CompanyAuth auth);
 }

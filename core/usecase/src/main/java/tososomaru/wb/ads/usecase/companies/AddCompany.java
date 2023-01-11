@@ -5,11 +5,11 @@ import tososomaru.wb.ads.companies.Company;
 import tososomaru.wb.ads.companies.CompanyAuth;
 
 public interface AddCompany {
-    Company execute(AddCompanyRequest request);
+  Company execute(AddCompanyRequest request);
 
-    @Value
-    class AddCompanyRequest {
-        String companyName;
-        CompanyAuth companyAuth;
-    }
+  @Value
+  class AddCompanyRequest {
+    String companyName;
+    CompanyAuth companyAuth;
+  }
 }

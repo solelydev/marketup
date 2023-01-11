@@ -6,24 +6,23 @@ import lombok.Getter;
 import tososomaru.wb.ads.bids.SearchBids;
 
 public interface GetSearchBids {
-    Either<GetSearchBidsError, SearchBids> execute(String keyword);
+  Either<GetSearchBidsError, SearchBids> execute(String keyword);
 
-    @AllArgsConstructor
-    @Getter
-    abstract sealed class GetSearchBidsError {
-        private final String message;
+  @AllArgsConstructor
+  @Getter
+  abstract sealed class GetSearchBidsError {
+    private final String message;
 
-        public static final class CreateKeyword extends GetSearchBidsError {
-            public CreateKeyword(String message) {
-                super(message);
-            }
-        }
-
-        public static final class BidsNotFound extends GetSearchBidsError {
-            public BidsNotFound() {
-                super("bids not found");
-            }
-        }
+    public static final class CreateKeyword extends GetSearchBidsError {
+      public CreateKeyword(String message) {
+        super(message);
+      }
     }
 
+    public static final class BidsNotFound extends GetSearchBidsError {
+      public BidsNotFound() {
+        super("bids not found");
+      }
+    }
+  }
 }

@@ -8,27 +8,26 @@ import tososomaru.wb.ads.usecase.campaigns.CreateCampaign;
 import tososomaru.wb.ads.usecase.companies.CompanyExtractor;
 
 @AllArgsConstructor
-
 public class CreateCampaignUseCase implements CreateCampaign {
 
-    private final CampaignSaver campaignSaver;
-    private final CompanyExtractor companyExtractor;
+  private final CampaignSaver campaignSaver;
+  private final CompanyExtractor companyExtractor;
 
-    @Override
-    public Campaign execute(CreateCampaignRequest request) {
-        Company company = companyExtractor.getById(request.getCompanyId())
-                .orElseThrow(() -> new RuntimeException("not found"));
+  @Override
+  public Campaign execute(CreateCampaignRequest request) {
+    Company company =
+        companyExtractor
+            .getById(request.getCompanyId())
+            .orElseThrow(() -> new RuntimeException("not found"));
 
-        // TODO создать компанию в wb
-        return campaignSaver.save(
-                Campaign.create(
-                        0,
-                        request.getCompanyId(),
-                        request.getName(),
-                        request.getSKUs(),
-                        request.getAdsType(),
-                        request.getCampaignType()
-                )
-        );
-    }
+    // TODO создать компанию в wb
+    return campaignSaver.save(
+        Campaign.create(
+            0,
+            request.getCompanyId(),
+            request.getName(),
+            request.getSKUs(),
+            request.getAdsType(),
+            request.getCampaignType()));
+  }
 }

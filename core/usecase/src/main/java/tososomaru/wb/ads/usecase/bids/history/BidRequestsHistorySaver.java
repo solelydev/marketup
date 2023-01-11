@@ -4,6 +4,5 @@ import tososomaru.wb.ads.bids.RequestBids;
 
 public interface BidRequestsHistorySaver {
 
-    RequestBids save(RequestBids bidRequest);
-
+  RequestBids save(RequestBids bidRequest);
 }

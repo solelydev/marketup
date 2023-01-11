@@ -1,4 +1,3 @@
 package tososomaru.wb.ads.common.base;
 
-public interface AggregateRoot {
-}
+public interface AggregateRoot {}
