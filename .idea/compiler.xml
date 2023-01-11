@@ -21,8 +21,8 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.24/13a394eed5c4f9efb2a6d956e2086f1d81e857d9/lombok-1.18.24.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.therapi/therapi-runtime-javadoc-scribe/0.13.0/4167e2d40bd312de3e7a80bc8e3997394e314685/therapi-runtime-javadoc-scribe-0.13.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.therapi/therapi-runtime-javadoc/0.13.0/971082ad068aef0398e91a03f2c03acc2fe0498a/therapi-runtime-javadoc-0.13.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.therapi/therapi-runtime-javadoc-scribe/0.15.0/bd7a08fb0143141e1a8b2a6075194fe8280fe21d/therapi-runtime-javadoc-scribe-0.15.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.therapi/therapi-runtime-javadoc/0.15.0/2ae6d4c59e1c6280cccf64955a83739dc154270b/therapi-runtime-javadoc-0.15.0.jar" />
         </processorPath>
         <module name="wb-advertising.core.rest.main" />
       </profile>
