@@ -1,0 +1,16 @@
+plugins {
+    id 'org.springframework.boot' version '3.0.1'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+dependencies {
+    implementation project(':autobidder:domain')
+    implementation project(':autobidder:in-memory-persistence')
+    implementation project(':autobidder:rest')
+    implementation project(':autobidder:usecase')
+    implementation project(':autobidder:wb-api')
+    implementation project(':autobidder:listener')
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+}

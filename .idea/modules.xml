@@ -2,23 +2,22 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/application/wb-advertising.core.application.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/common/wb-advertising.core.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/common/wb-advertising.core.common.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/common/wb-advertising.core.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/common/wb-advertising.core.common.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/domain/wb-advertising.core.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/domain/wb-advertising.core.domain.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/in-memory-persistence/wb-advertising.core.in-memory-persistence.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/jpa-persistence/wb-advertising.core.jpa-persistence.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/jpa-persistence/wb-advertising.core.jpa-persistence.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/jpa-persistence/wb-advertising.core.jpa-persistence.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/jpa-persistence/wb-advertising.core.jpa-persistence.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/listener/wb-advertising.core.listener.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/listener/wb-advertising.core.listener.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/listener/wb-advertising.core.listener.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/listener/wb-advertising.core.listener.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/rest/wb-advertising.core.rest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/rest/wb-advertising.core.rest.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/rest/wb-advertising.core.rest.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/rest/wb-advertising.core.rest.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/usecase/wb-advertising.core.usecase.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/usecase/wb-advertising.core.usecase.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/usecase/wb-advertising.core.usecase.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/usecase/wb-advertising.core.usecase.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/wb-api/wb-advertising.core.wb-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/wb-api/wb-advertising.core.wb-api.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/wb-api/wb-advertising.core.wb-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/wb-api/wb-advertising.core.wb-api.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/application/com.solelydev.marketup.marketup.autobidder.application.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/application/com.solelydev.marketup.marketup.autobidder.application.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/common/com.solelydev.marketup.marketup.autobidder.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/common/com.solelydev.marketup.marketup.autobidder.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/domain/com.solelydev.marketup.marketup.autobidder.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/domain/com.solelydev.marketup.marketup.autobidder.domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/in-memory-persistence/com.solelydev.marketup.marketup.autobidder.in-memory-persistence.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/in-memory-persistence/com.solelydev.marketup.marketup.autobidder.in-memory-persistence.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/listener/com.solelydev.marketup.marketup.autobidder.listener.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/listener/com.solelydev.marketup.marketup.autobidder.listener.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/rest/com.solelydev.marketup.marketup.autobidder.rest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/rest/com.solelydev.marketup.marketup.autobidder.rest.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/usecase/com.solelydev.marketup.marketup.autobidder.usecase.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/usecase/com.solelydev.marketup.marketup.autobidder.usecase.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/wb-api/com.solelydev.marketup.marketup.autobidder.wb-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/wb-api/com.solelydev.marketup.marketup.autobidder.wb-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/application/marketup.autobidder.application.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/application/marketup.autobidder.application.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/common/marketup.autobidder.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/common/marketup.autobidder.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/domain/marketup.autobidder.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/domain/marketup.autobidder.domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/in-memory-persistence/marketup.autobidder.in-memory-persistence.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/in-memory-persistence/marketup.autobidder.in-memory-persistence.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/listener/marketup.autobidder.listener.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/listener/marketup.autobidder.listener.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/rest/marketup.autobidder.rest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/rest/marketup.autobidder.rest.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/usecase/marketup.autobidder.usecase.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/usecase/marketup.autobidder.usecase.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autobidder/wb-api/marketup.autobidder.wb-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/autobidder/wb-api/marketup.autobidder.wb-api.main.iml" />
     </modules>
   </component>
 </project>

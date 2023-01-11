@@ -1,0 +1,6 @@
+
+dependencies {
+    implementation project(':autobidder:domain')
+    implementation project(':autobidder:common')
+    implementation project(':autobidder:wb-api')
+}
