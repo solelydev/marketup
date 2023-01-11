@@ -4,8 +4,7 @@ plugins {
 
 allprojects {
 
-    group 'tososomaru.wb.ad'
-    version = '1.0-SNAPSHOT'
+    group 'com.solelydev.marketup'
 
     repositories {
         mavenCentral()
