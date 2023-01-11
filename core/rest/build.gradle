@@ -17,5 +17,5 @@ dependencies {
     annotationProcessor 'com.github.therapi:therapi-runtime-javadoc-scribe:0.15.0'
 
     // Runtime library
-    implementation 'com.github.therapi:therapi-runtime-javadoc:0.13.0'
+    implementation 'com.github.therapi:therapi-runtime-javadoc:0.15.0'
 }
