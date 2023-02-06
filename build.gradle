@@ -12,7 +12,7 @@ allprojects {
 }
 
 ext {
-    lombokVersion = '1.18.24'
+    lombokVersion = '1.18.26'
     vavrVersion = '0.10.4'
 }
 
